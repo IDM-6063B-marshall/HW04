@@ -10,13 +10,13 @@ function setup() {
 
   fill(rr, rg, rb);
 
-  let ry = random(-100, 100);
-  let rx = random(-100, 100);
-
-  //Drawing random ellipses
-  for (let y = random(5); y < height + 100; y += ry) {
-    for (let x = random(5); x < width + 100; x += rx) {
-      ellipse(x, y, random(150));
+  //Drawing random bubbles
+  for (let y = 0; y < height; y += random(-10, 100)) {
+    for (let x = 0; x < width; x += random(-10, 100)) {
+      let ry = random(0, height);
+      let rx = random(0, width);
+      let rn = random(1, 55);
+      ellipse(rx, ry, rn);
     }
   }
 }
